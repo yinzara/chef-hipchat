@@ -45,6 +45,7 @@ module HipChat
       @options[:name] = 'Chef' if @options[:name].nil?
       @options[:notify_users] = false if @options[:notify_users].nil?
       @options[:color] = 'red' if @options[:color].nil?
+      @options[:message_format] = 'text' if @options[:message_format].nil?
     end
 
     def report

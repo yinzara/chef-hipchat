@@ -11,7 +11,7 @@ action :speak do
                                     message,
                                     :notify => @new_resource.notify,
                                     :color => @new_resource.color,
-                                    :message_format => (@new_resource.attribute?('format'))?(@new_resource.format):'text')
+                                    :message_format => @new_resource.message_format)
   rescue => e
       if @new_resource.failure_ok
         Chef::Log.info("HipChat: failed to connect to HipChat.")

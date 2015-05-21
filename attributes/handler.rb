@@ -8,3 +8,4 @@ default['hipchat']['handler']['enabled'] = false
 default['hipchat']['handler']['name'] = nil
 default['hipchat']['handler']['color'] = nil
 default['hipchat']['handler']['notify_users'] = nil
+default['hipchat']['handler']['message_format'] = 'text' # or 'html'

@@ -43,7 +43,8 @@ handler_options = {
   :name => handler['name'],
   :notify_users => handler['notify_users'],
   :color => handler['color'],
-  :api_version => handler['api_version']
+  :api_version => handler['api_version'],
+  :message_format => handler['message_format']
 }
 
 chef_handler 'HipChat::NotifyRoom' do
