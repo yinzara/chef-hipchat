@@ -10,6 +10,7 @@ attribute :server, :kind_of => String, :default => 'https://api.hipchat.com'
 attribute :nickname, :kind_of => String, :required => true
 attribute :token, :kind_of => String, :required => true
 attribute :room, :kind_of => String, :required => true
+attribute :message_format, :kind_of => String, :default => 'text', :regex => /^(text|html)$/
 attribute :message, :kind_of => [ String, FalseClass ], :default => false
 attribute :failure_ok, :kind_of => [ TrueClass, FalseClass ], :default => true
 attribute :notify, :kind_of => [ TrueClass, FalseClass ], :default => true
