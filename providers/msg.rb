@@ -10,7 +10,8 @@ action :speak do
     client[@new_resource.room].send(@new_resource.nickname,
                                     message,
                                     :notify => @new_resource.notify,
-                                    :color => @new_resource.color)
+                                    :color => @new_resource.color,
+                                    :message_format => (@new_resource.attribute?('format'))?(@new_resource.format):'text')
   rescue => e
       if @new_resource.failure_ok
         Chef::Log.info("HipChat: failed to connect to HipChat.")
